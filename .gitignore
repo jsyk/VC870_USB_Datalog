@@ -1,0 +1,4 @@
+*.o
+*~
+utd04-cable/hidapi
+utd04-cable/utd04-cable
