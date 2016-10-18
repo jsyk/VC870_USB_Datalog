@@ -27,7 +27,7 @@ my %fun_sel = (
 );
 
 while (<STDIN>) {
-    my @ivals = /^(\d{2})(\d)(\d{5})(\d{5})(\d{2})(\d)(\d)(\d)(\d)(\d)(\d)/;
+    my @ivals = /^(\d{2})(\d)(\d{5})(\d{5})(\d{2})(.)(.)(.)(.)(.)(\d)/;
     if (not defined($ivals[0])) {
         next;
     }
@@ -175,12 +175,12 @@ while (<STDIN>) {
         $div2 = $div;
     }
 
-    my $status = $ivals[5];
-    my $option1 = $ivals[6];
-    my $option2 = $ivals[7];
-    my $option3 = $ivals[8];
-    my $option4 = $ivals[9];
-    my $option5 = $ivals[10];
+    my $status  = ord($ivals[5]);
+    my $option1 = ord($ivals[6]);
+    my $option2 = ord($ivals[7]);
+    my $option3 = ord($ivals[8]);
+    my $option4 = ord($ivals[9]);
+    my $option5 = ord($ivals[10]);
 
     my $sign2_flag = ($status & 0x08);
     my $sign1_flag = ($status & 0x04);
